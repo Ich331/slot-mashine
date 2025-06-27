@@ -1,0 +1,119 @@
+body {
+    background: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.slot-machine {
+    background: #333;
+    padding: 3rem 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 32px #000a;
+    text-align: center;
+}
+
+.slots {
+    font-size: 5rem;
+    letter-spacing: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+button#spin {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 1.2rem 3.5rem;
+    font-size: 2rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 1.2rem;
+}
+button#spin:hover {
+    background: #e65100;
+}
+
+#result {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    min-height: 2em;
+}
+
+.slots span.spinning {
+    animation: slot-spin 0.15s linear infinite;
+    filter: none;
+}
+
+@keyframes slot-spin {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(10deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.bet-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 1.2em;
+}
+
+.bet-container label {
+    margin-right: 0.5em;
+}
+
+.bet-container input[type="number"]::-webkit-inner-spin-button,
+.bet-container input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: auto;
+    appearance: auto;
+    width: auto;
+    height: auto;
+}
+
+.bet-container input[type="number"] {
+    font-size: 1.5rem;
+    width: 105px;
+    padding: 0.35em 0.6em;
+    border-radius: 0.5em;
+    border: 1.5px solid #888;
+    text-align: right;
+    margin: 0;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.bet-container button {
+    font-size: 0.8rem;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-radius: 0.4em;
+    border: 1.5px solid #888;
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.bet-container button:hover {
+    background: #666;
+}
+
+.bet-container span {
+    margin-left: 0.7em;
+}
+
+.coins-container {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}

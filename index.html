@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einarmiger Bandit</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <div class="slot-machine">
+        <h1>Einarmiger Bandit</h1>
+        <div class="slots">
+            <span id="slot1">🍒</span>
+            <span id="slot2">🍋</span>
+            <span id="slot3">🍊</span>
+        </div>
+        <div class="coins-container">
+            <span>Münzen: <span id="coins">100</span></span>
+        </div>
+        <div class="bet-container">
+            <label for="bet">Einsatz:</label>
+            <button id="bet-down" type="button">-</button>
+            <input type="number" id="bet" min="1" max="100" value="10" style="width:60px;">
+            <button id="bet-up" type="button">+</button>
+            <span id="bet-display">Einsatz: 10</span>
+        </div>
+        <button id="spin">Drehen</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
