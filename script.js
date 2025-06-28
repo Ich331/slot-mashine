@@ -4,7 +4,7 @@ function randomSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-let coins = 100;
+let coins = 1000;
 const coinsDisplay = document.getElementById('coins');
 const betInput = document.getElementById('bet');
 const betDisplay = document.getElementById('bet-display');
