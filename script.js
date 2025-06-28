@@ -94,7 +94,7 @@ if (spinButton) {
                 win = bet * 10;
                 result = `Jackpot! Du hast ${win} Münzen gewonnen! 🎉`;
             } else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3) {
-                win = bet * 2;
+                win = bet * 1;
                 result = `Fast! Zwei Symbole stimmen überein. Gewinn: ${win} Münzen.`;
             } else {
                 if (coins === 0) {
