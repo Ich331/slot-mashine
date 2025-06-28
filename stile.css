@@ -117,3 +117,41 @@ button#spin:hover {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
 }
+/* Mobile-Optimierung */
+@media (max-width: 600px) {
+  .slot-machine {
+    padding: 1.2rem 0.5rem;
+    border-radius: 1.2rem;
+    width: 98vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .slots {
+    font-size: 2.5rem;
+    letter-spacing: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .bet-container input[type="number"] {
+    width: 60px;
+    font-size: 1.1rem;
+    padding: 0.2em 0.4em;
+  }
+  .bet-container {
+    gap: 0.3em;
+    flex-wrap: wrap;
+  }
+  button#spin {
+    width: 98vw;
+    max-width: 340px;
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
+    margin-top: 0.8rem;
+  }
+  .coins-container {
+    font-size: 1.1rem;
+  }
+  #result {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+}
