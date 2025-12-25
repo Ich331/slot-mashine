@@ -125,6 +125,14 @@ document.addEventListener('keydown', (e) => {
         } else if (e.key === 'ArrowDown') {
             betStep('down');
             e.preventDefault();
+        } else if (e.key === 'ArrowRight') {
+            // Pfeil rechts: Einsatz verdoppeln
+            betStep('double');
+            e.preventDefault();
+        } else if (e.key === 'ArrowLeft') {
+            // Pfeil links: Einsatz halbieren
+            betStep('half');
+            e.preventDefault();
         }
     }
 });
@@ -135,7 +143,17 @@ let betInterval;
 function betStep(direction) {
     let bet = parseInt(betInput.value, 10) || 1;
     if (direction === 'up' && bet < coins) bet++;
-    if (direction === 'down' && bet > 1) bet--;
+    else if (direction === 'down' && bet > 1) bet--;
+    else if (direction === 'double') {
+        // Verdoppeln, aber nicht über Kontostand hinaus
+        bet = Math.min(coins, bet * 2);
+        if (bet < 1) bet = 1;
+    } else if (direction === 'half') {
+        // Halbieren, mindestens 1
+        bet = Math.floor(bet / 2);
+        if (bet < 1) bet = 1;
+    }
+    // Aktualisiere Input und Anzeige
     betInput.value = bet;
     if (betDisplay) betDisplay.textContent = `Einsatz: ${bet}`;
 }
